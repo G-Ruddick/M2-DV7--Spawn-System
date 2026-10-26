@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8572200096074195443}
   - component: {fileID: 674540725691781664}
   - component: {fileID: 1676711283605112549}
-  - component: {fileID: 613338769466548990}
+  - component: {fileID: 3032583566650073656}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5c2327686d6d74e4e82a158413a93062, type: 2}
+  - {fileID: 2100000, guid: 3f1336a4cf5f1ff49ad087243fb65d31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,24 +91,15 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &613338769466548990
-SphereCollider:
+--- !u!114 &3032583566650073656
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3177402967032943656}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd9eb9ce95497b419a607bf48efce93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GreenSphere

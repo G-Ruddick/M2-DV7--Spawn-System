@@ -442,8 +442,9 @@ GameObject:
   m_Component:
   - component: {fileID: 945679264}
   - component: {fileID: 945679263}
-  - component: {fileID: 945679262}
-  - component: {fileID: 945679261}
+  - component: {fileID: 945679267}
+  - component: {fileID: 945679266}
+  - component: {fileID: 945679265}
   m_Layer: 0
   m_Name: Factory
   m_TagString: Untagged
@@ -451,38 +452,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &945679261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945679260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0197e091dc15a5243958d7e4bdb0e999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CubeFactory
-  prefabs:
-  - {fileID: 3988054648597620344, guid: 577f392f5947cea4e9ffa4f87b73c000, type: 3}
-  - {fileID: 3988054648597620344, guid: b2d7ac77c9907eb4799378d3d2620cc5, type: 3}
-  - {fileID: 3988054648597620344, guid: a6b40144075b803439157c31d891a788, type: 3}
---- !u!114 &945679262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945679260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b357b6a1ebe6a94bbbd217ba5ede6c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SphereFactory
-  prefabs:
-  - {fileID: 3177402967032943656, guid: 29d57da6ae9a0fb4c85f9cb260dcdbff, type: 3}
-  - {fileID: 6619026125232867366, guid: 309359be4a588784a8c63a980143cda6, type: 3}
-  - {fileID: 7100678720468462588, guid: 960498b3db3ccca42aac5f18bbbfa3ea, type: 3}
 --- !u!114 &945679263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,8 +464,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7f2c435bcb2ad48b8de19c15421bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShapeSpawner
-  cubeFactory: {fileID: 945679261}
-  sphereFactory: {fileID: 945679262}
+  greenFactory: {fileID: 945679267}
+  redFactory: {fileID: 945679266}
+  blueFactory: {fileID: 945679265}
 --- !u!4 &945679264
 Transform:
   m_ObjectHideFlags: 0
@@ -512,6 +482,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &945679265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945679260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c79d37654e1f3e4b93e2ec371913fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlueFactory
+  sphere: {fileID: 3177402967032943656, guid: 18397358d38f8e14bb6d5ddd99e11e22, type: 3}
+  cube: {fileID: 3988054648597620344, guid: 49063b2cdcb0ed1408cb9a488b0aa93d, type: 3}
+  cylinder: {fileID: 3988054648597620344, guid: 3396237ab614200469e26d6701bc8ccd, type: 3}
+--- !u!114 &945679266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945679260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c62fc51105d45419c9c942cb8038be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedFactory
+  sphere: {fileID: 3177402967032943656, guid: 4b5dfafc06624a541894b4bca2578db1, type: 3}
+  cube: {fileID: 3988054648597620344, guid: 2498547bb38a3be47876693097cffa6c, type: 3}
+  cylinder: {fileID: 3988054648597620344, guid: 369562f085724e84fb80a3950a6e1b74, type: 3}
+--- !u!114 &945679267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945679260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a41ace0cfbbe6748b99df0b664fb7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GreenFactory
+  sphere: {fileID: 3177402967032943656, guid: 29d57da6ae9a0fb4c85f9cb260dcdbff, type: 3}
+  cube: {fileID: 3988054648597620344, guid: 577f392f5947cea4e9ffa4f87b73c000, type: 3}
+  cylinder: {fileID: 3988054648597620344, guid: 14ecc20e117d55244b7a9d4022f341d6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
